@@ -1,0 +1,83 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>生徒当てるヤツ</title>
+  <link rel="stylesheet" type="text/css" href="./css/style.css">
+  <script type="text/javascript" src="/eel.js"></script>
+  <script type="text/javascript">
+    async function Student_choice() {
+      var demo2 = document.getElementById("div0");
+      demo2.innerHTML = "";
+      div0.insertAdjacentHTML('afterbegin', '<div id="name"></div>');
+      let val = await eel.Student_choice()();
+      var doc0 = document.getElementById("name");
+      doc0.innerHTML = val;
+    }
+
+    async function Student_load() {
+      eel.Student_load();
+    }
+
+    async function Student_show() {
+      let val = await eel.Student_show()();
+      var doc0 = document.getElementById("div0");
+      doc0.innerHTML = val;
+    }
+
+    async function History_show() {
+      let val = await eel.History_show()();
+      var doc0 = document.getElementById("div0");
+      doc0.innerHTML = val;
+    }
+
+    async function History_clear() {
+      let val = await eel.History_clear()();
+      var doc0 = document.getElementById("div0");
+      doc0.innerHTML = val;
+    }
+
+    async function History_cancel() {
+      let val = await eel.History_cancel()();
+      var doc0 = document.getElementById("div0");
+      doc0.innerHTML = val;
+    }
+  </script>
+</head>
+
+<body>
+  <center>
+    <div id="div0">
+    </div>
+    <div class="bottom">
+      <a href="#" onclick="Student_choice()" class="btn-square">生徒を当てる</a>
+      <a href="#" onclick="History_cancel()" class="btn-square">欠席者を飛ばす</a>
+      <a href="#" onclick="Student_show()" class="btn-square">残りの生徒を表示</a>
+      <a href="#" onclick="History_show()" class="btn-square">履歴の表示</a>
+      <a href="#" onclick="History_clear()" class="btn-square">履歴の消去</a>
+      <a href="#" onclick="Student_load()" class="btn-square">名簿を更新</a>
+    </div>
+  </center>
+  <div class='markdown-preview' data-use-github-style>
+    <details>
+      <summary>名簿の更新方法</summary>
+      <div>
+
+        <h1 id="名簿の更新方法">名簿の更新方法</h1>
+        <h3 id="1">1</h3>
+        <p>任意のファイル名のテキストファイル(*.txt)を作成します.</p>
+        <h3 id="2">2</h3>
+        <p>その中に<br>
+          1.名前<br>
+          2.名前<br>
+          ・<br>
+          ・<br>
+          ・<br>
+          と入力します.</p>
+        <h3 id="3">3</h3>
+        <p>名簿を更新をクリックし,テキストファイルを選択する.</p>
+      </div>
+    </details>
+  </div>
+
+</html>
